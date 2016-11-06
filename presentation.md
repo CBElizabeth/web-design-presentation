@@ -47,3 +47,7 @@
 * https://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly
 * https://github.com/wtfluckey/sealions-designstuffs
 * https://github.com/girldevelopit/gdi-featured-html-css-intro
+
+---
+### Fonts
+https://fonts.google.com/selection?selection.family=Alice|Sacramento&query=alice

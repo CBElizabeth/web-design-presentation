@@ -1,10 +1,36 @@
 /* setup */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+a {
+    text-decoration: none;
+}
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+textarea {
+    resize: vertical;
+}
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 /* grid system */
 [class*='col-'] {
@@ -36,7 +62,7 @@
     width: 66.66%;
 }
 .col-1 { /* Whole Width Column */
-
+    width: 100%;
 }
 .grid:after {
     content: "";
@@ -45,28 +71,165 @@
 }
 
 /* layout 1 */
+body {
+    position: fixed;
+    font-family: 'Arimo', sans-serif;
+    color: #431C5D;
+    height: 100vh;
+    width: 100vw;
+}
+
 main {
-    height: 90vh;
+    height: 80vh;
+    overflow: scroll;
+    padding-bottom: 5%;
+    -webkit-mask-image: -webkit-gradient(linear, left 95%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 
 footer {
-    height: 10vh;
+    height: 20vh;
 }
 
+.social > i {
+    padding-top: 5vh;
+    text-align: center;
+}
 
+nav > a, nav > a:visited {
+    background-color: #D9E024;
+    border: 1px solid #CDD422;
+    color: #E05915;
+    font-size: 2.5vh;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+nav > a:active{
+    background-color: blue;
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
+.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+}
+
+.header {
+    font-size: 20vh;
+    line-height: 20vh;
+    padding-top: 18vh;
+    text-align: center;
+    font-family: 'Pacifico', serif;
+    color: #E05915;
+}
+
+.subheader {
+    font-size: 4vh;
+    line-height: 4vh;
+    padding-top: 3vh;
+    text-align: center;
+}
 
 /* circular images */
-.circular-landscape {
-	display: inline-block;
-	position: relative;
-	width: 350px;
-	height: 350px;
-	overflow: hidden;
-	border-radius: 50%;
-	border:15px solid #CDCDB4;
+.circular-square {  /* requires square image - crop online at http://croppola.com/ */
+    border-radius: 50%;
+    width: 30vmin;
+    height: 30vmin;
 }
-.circular-landscape img {
-	width: auto;
-	height: 100%;
-	margin-left: -50px;
+
+/* BACKGROUNDS */
+
+/* generated background patterns:
+    -use for color backgrounds, not with images
+    -change the hex values consistently (e.g. find 
+        all #E3EB26 values in the same {} block and
+        change them to the color of your choice :D */
+    
+.polka-dot-bg {
+    background-color:#001;
+    background-image: radial-gradient(white 15%, transparent 16%), 
+        radial-gradient(white 15%, transparent 16%);
+    background-size:60px 60px;
+    background-position: 0 0, 30px 30px;
 }
+
+.plus-bg {
+    background: radial-gradient(circle, transparent 20%, #E3EB26 20%, #E3EB26 80%, transparent 80%, transparent),
+        radial-gradient(circle, transparent 20%, #E3EB26 20%, #E3EB26 80%, transparent 80%, transparent) 50px 50px,
+        linear-gradient(#D9E024 8px, transparent 8px) 0 -4px,
+        linear-gradient(90deg, #D9E024 8px, transparent 8px) -4px 0;
+    background-color: #E3EB26;
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+.arrows-bg {
+    background:
+        linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+        linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+        linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+    background-color:#e1ebbd;
+    background-size: 128px 128px;
+}
+
+.stars-bg {
+    background:
+        linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+        linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+        linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+        linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+        linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+        linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
+
+        linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+        linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+        linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+        linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+        linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+        linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+    background-color: #232927;
+    background-size: 100px 100px;
+}
+
+/* background images */
+
+.image-background {
+    position: relative;
+    background-clip: border-box;
+    background-image: url(./images/stock-images/pink-smoke-suitcase.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: center center;
+    z-index: -2;
+}
+
+.image-background > .overlay { /*fix background, genericize*/
+    position: absolute;
+    margin: 0px;
+    height: 105vh;
+    width: 105vw;
+    top: -5vh;
+    left: -5vw;
+    z-index: -1;
+    background-image: url(./images/patterns/patterned-diamonds-dark.png);
+    background-repeat: repeat;
+}
+
+@media only screen  and (max-height : 1280px) { /* set max-height to the height of your image, for narrow screens */
+    .image-background {
+        background-size: auto 115vh;
+    }
+}
+
+
+/* repeating pattern overlay over color */
+
+
+/* repeating pattern overlay over image */
