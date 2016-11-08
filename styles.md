@@ -31,8 +31,16 @@
 ## Image Styles
 
 ---
-## Image Gallery Element
+## Using The Grid
+
+---
+## Image Gallery
 
 ---
 ## Page Backgrounds
 
+---
+## Icons
+
+---
+## 
