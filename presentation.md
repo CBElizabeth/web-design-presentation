@@ -1,30 +1,49 @@
-# Setup/Startup Slide
-* Install Google Chrome
-* Install Sublime Text (or other text editor)
-* Write a bio/blurb/intro
-* Dig up pictures you might want to add
+
+## Make sure you have..
+
+1. Installed Google Chrome
+2. Installed Sublime Text (or another text editor)
+3. A short bio or a few blurbs you might like to include
+4. A few pictures you might want to add
 
 ---
-# Title
-* 5 minutes on bio
-* 15 minutes on intro (include examples)
-* Remaining on activity
+
+# Women, Wine & Web Design
+
+### Introductory HTML and CSS Workshop
+
+Instructor: Elizabeth Blackburn
+
+Sponsored by **Tech Elevator** & **Cover My Meds**
 
 ---
-## Bio
-* Current role
-* Brief background
-* DBC
-* Likes/dislikes
+
+## Who am I?
+
+* Associate Web Developer @ The Wendy's Company
+* Bootcamp Grad
+* Maker of Things
+
+---
+
+## Before we get started..
+
+1. Don't be afraid to ask questions.
+2. Don't worry if things don't click at first.
+3. Don't fall too in love with an idea.
+4. Don't try to do too much.
+
+---
+
+# Fire up those Chrome Devtools!
+
+---
+![](./portfolio/images/stock-images/pink-smoke-suitcase.jpg)
+## Unpacking Web Pages
 
 
 ---
-## Components of a web page (demystify)
 
----
-## Example (simple page on tech elevator or personal page)
-
----
 ## Elements
 1. general structure (head, body)
 2. non-semantic elements (div, span)
@@ -32,6 +51,7 @@
 5. activity (basic header with name and photo)
 
 ---
+
 ## Styles
 1. what are stylesheets
 2. elements of a style
@@ -47,7 +67,3 @@
 * https://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly
 * https://github.com/wtfluckey/sealions-designstuffs
 * https://github.com/girldevelopit/gdi-featured-html-css-intro
-
----
-### Fonts
-https://fonts.google.com/selection?selection.family=Alice|Sacramento&query=alice

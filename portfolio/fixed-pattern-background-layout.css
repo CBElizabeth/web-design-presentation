@@ -1,0 +1,63 @@
+/* layout 1 */
+body {
+    position: fixed;
+    font-family: 'Arimo', sans-serif;
+    color: #431C5D;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    color: #431C5D;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.4em;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+main {
+    height: 100vh;
+    padding-bottom: 3vh;
+    /* adds background-color transparent gradient to the bottom of the box to indicate additional content. */
+    /*-webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));*/
+}
+
+.header {
+    padding-top: 0vh;
+    text-align: left;
+}
+
+.hello-text {
+    margin-left: -2vw;
+    font-size: 20vmin;
+    line-height: 20vmin;
+    font-family: 'Pacifico', serif;
+    color: #E05915;
+}
+
+.social-links {
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    left: 0px;
+    width: 5vw;
+}
+
+.social-links > a {
+    float: left;
+    text-align: center;
+    height: 25vh;
+    line-height: 25vh;
+    width: 10vw;
+    clear: both;
+}
+
+#profile-picture {
+    float: left;
+    margin-top: 0vh;
+    margin-right: 3vw;
+    margin-bottom: 2vh;
+}

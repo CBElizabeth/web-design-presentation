@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+    color: #000000;
+    overflow: scroll;
+}
+
+section {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.pacifico-arimo > h2 {
+    font-family: 'Pacifico';
+}
+
+.pacifico-arimo > p {
+    font-family: 'Arimo'
+}
+
+.muli-playfair-display > h2 {
+    font-family: 'Muli';
+}
+
+.muli-playfair-display > p {
+    font-family: 'Playfair Display';
+}
+
+.sacramento-alice > h2 {
+    font-family: 'Sacramento';
+}
+
+.sacramento-alice > p {
+    font-family: 'Alice';
+}
+
+.oswald-merriweather > h2 {
+    font-family: 'Oswald';
+}
+
+.oswald-merriweather > p {
+    font-family: 'Merriweather';
+}
+
+.yeseva-one-josefin-sans > h2 {
+    font-family: 'Yeseva One';
+}
+
+.yeseva-one-josefin-sans > p {
+    font-family: 'Josefin Sans';
+}
+
+.flex-container {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-wrap: nowrap; /* Safari */
+    flex-wrap: nowrap;
+    -webkit-align-content: stretch; /* Safari */
+    align-content: stretch;
+    -webkit-justify-content: space-around; /* Safari */
+    justify-content: space-around;
+
+}
+
+.flex-container > div {
+    min-width: 10vmax;
+    min-height: 10vmax;
+    background-color: #000000;
+    text-align: center;
+    line-height: 10vmax;
+}
+

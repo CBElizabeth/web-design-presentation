@@ -10,6 +10,7 @@ section.image-slider {
     margin-bottom: 5vh;
     max-width: 85vw;
     height: auto;
+    font-family: inherit;
 }
 
 input {
@@ -120,9 +121,10 @@ article img {
     opacity: 0;
     color: #000;
     text-align: left;
+    max-width: 60vw;
 }
 
-.info h3 {
+.info > h3 {
     color: #FFFFFF;
     margin: 0 0 5px;
     font-weight: normal;

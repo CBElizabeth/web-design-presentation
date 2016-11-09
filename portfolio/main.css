@@ -1,6 +1,10 @@
-/* setup */
+/* Setup */
+
 html {
     color: #431C5D;
+}
+body {
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -26,13 +30,18 @@ textarea {
     resize: vertical;
 }
 
+/* Comment out text below to restore visible scrollbars! */
 ::-webkit-scrollbar { 
     display: none; 
 }
 
 
 
-/* grid system */
+
+
+
+/* Grid System */
+
 [class*='col-'] {
     float: left;
     padding-right: 20px;
@@ -70,124 +79,66 @@ textarea {
     clear: both;
 }
 
-/* layout 1 */
-body {
-    position: fixed;
-    margin: 0px;
-    font-family: 'Arimo', sans-serif;
-    color: #431C5D;
-    height: 100vh;
-    width: 100vw;
-}
 
-a {
-    color: #431C5D;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 1.4em;
-}
 
-p {
-    line-height: 1.4em;
-}
 
-main {
-    height: 100vh;
-    padding-bottom: 3vh;
-    /* adds background-color transparent gradient to the bottom of the box to indicate additional content. */
-    /*-webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));*/
-}
 
-section {
+/* Structural Elements */
+
+
+/* Using sections with the class 'page' attached will give you (roughly) full page
+    elements to put your content in. The last-of-type prevents the final section
+    on the page from skewing */
+section.page {
     padding-bottom: 28vh;
     padding-top: 28vh;
     float: left;
 }
 
-section:last-of-type {
+section.page:last-of-type {
     padding-bottom: 0vh;
 }
 
-/*footer {
-    position: fixed;
-    bottom: 0vh;
-    height: 20vh;
-}*/
-
-/*nav > a, nav > a:visited {
-    background-color: #D9E024;
-    border: 1px solid #CDD422;
-    color: #E05915;
-    font-size: 2.5vh;
-    height: 8vh;
-    line-height: 8vh;
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    vertical-align: middle;
-}
-
-nav > a:active{
-    background-color: blue;
-}*/
-
-.container {
+.container-right-skew {
     margin-left: 15vw;
     margin-right: 5vw;
     padding-left: 5vw;
-    padding-right: 5vw;
+    padding-right: 15vw;
     padding-bottom: 35vh;
     padding-top: 35vh;
     width: 85vw;
     overflow: scroll;
 }
 
-.header {
-    padding-top: 0vh;
-    text-align: left;
-}
-
-.hello-text {
-    margin-left: -2vw;
-    font-size: 20vmin;
-    line-height: 20vmin;
-    font-family: 'Pacifico', serif;
-    color: #E05915;
-}
-
-.social-links {
-    position: fixed;
-    z-index: 3;
+.container-centered {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding-top: 5vh;
+    padding-bottom: 35vh;
     height: 100vh;
-    left: 0px;
-    width: 5vw;
 }
 
-.social-links > a {
-    float: left;
-    text-align: center;
-    height: 25vh;
-    line-height: 25vh;
-    width: 10vw;
-    clear: both;
-}
 
-#profile-picture {
-    float: left;
-    margin-top: 0vh;
-    margin-right: 3vw;
-    margin-bottom: 2vh;
-}
 
-/* circular images */
-.circular-square {  /* requires square image - crop online at http://croppola.com/ */
+
+
+/* Image Effects */
+
+/* circular images
+    requires square image - crop online at http://croppola.com/ */
+
+.circular-square {
     border-radius: 50%;
     width: 35vmin;
     height: 35vmin;
     shape-outside: circle(50%);
 }
 
-/* BACKGROUNDS */
+
+
+
+
+/* Backgrounds */
 
 /* generated background patterns:
     -use for color backgrounds, not with images
@@ -203,6 +154,7 @@ nav > a:active{
     background-position: 0 0, 30px 30px;
 }
 
+
 .plus-bg {
     background: radial-gradient(circle, transparent 20%, #E3EB26 20%, #E3EB26 80%, transparent 80%, transparent),
         radial-gradient(circle, transparent 20%, #E3EB26 20%, #E3EB26 80%, transparent 80%, transparent) 50px 50px,
@@ -212,6 +164,7 @@ nav > a:active{
     background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 
+
 .arrows-bg {
     background:
         linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
@@ -220,6 +173,7 @@ nav > a:active{
     background-color:#e1ebbd;
     background-size: 128px 128px;
 }
+
 
 .stars-bg {
     background:
@@ -240,7 +194,16 @@ nav > a:active{
     background-size: 100px 100px;
 }
 
+
 /* fullscreen background image */
+
+.image-background {
+    background-color: #DD7F77;
+    background-image: url(./images/stock-images/pink-smoke-suitcase.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    z-index: -2;
+}
 @media all and (orientation: portrait) {
     .image-background {
         background-size: auto cover;
@@ -259,13 +222,6 @@ nav > a:active{
         background-position: 50% 25%;
     }
 }
-.image-background {
-    background-color: #DD7F77;
-    background-image: url(./images/stock-images/pink-smoke-suitcase.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 25%;
-    z-index: -2;
-}
 
 /* solid background color */
 .solid-background {
@@ -274,7 +230,7 @@ nav > a:active{
 }
 
 /* repeating pattern overlay over image or solid color */
-[class*='-background'] > .overlay { /* fix background, genericize */
+[class*='-background'] > .overlay {
     position: absolute;
     margin: 0px;
     height: 105vh;
