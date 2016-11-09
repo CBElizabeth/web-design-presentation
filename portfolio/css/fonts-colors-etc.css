@@ -9,6 +9,10 @@ section {
     margin-bottom: 10vh;
 }
 
+section:first-of-type {
+    margin-top: 0vh;
+}
+
 .pacifico-arimo > h2 {
     font-family: 'Pacifico';
 }
@@ -64,8 +68,12 @@ section {
 .flex-container > div {
     min-width: 10vmax;
     min-height: 10vmax;
-    background-color: #000000;
     text-align: center;
     line-height: 10vmax;
+}
+
+.before-image {
+    width: 35vmin;
+    height: 35vmin;
 }
 

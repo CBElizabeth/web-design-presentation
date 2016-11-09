@@ -26,7 +26,8 @@ main {
 }
 
 .header {
-    padding-top: 0vh;
+    padding-top: 35vh;
+    padding-bottom: 5vh;
     text-align: left;
 }
 

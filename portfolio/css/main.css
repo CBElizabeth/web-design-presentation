@@ -10,8 +10,8 @@ a {
     text-decoration: none;
 }
 *, *:after, *:before {
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 ::selection {
@@ -74,9 +74,9 @@ textarea {
     width: 100%;
 }
 .grid:after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
 }
 
 
@@ -87,35 +87,44 @@ textarea {
 
 
 /* Using sections with the class 'page' attached will give you (roughly) full page
-    elements to put your content in. The last-of-type prevents the final section
+    elements to put your content in. The first/last-of-type prevents the first/last sections
     on the page from skewing */
 section.page {
+    float: left;
     padding-bottom: 28vh;
     padding-top: 28vh;
-    float: left;
+}
+
+section.page:first-of-type {
+    padding-top: 35vh;
 }
 
 section.page:last-of-type {
-    padding-bottom: 0vh;
+    padding-bottom: 35vh;
 }
 
 .container-right-skew {
     margin-left: 15vw;
     margin-right: 5vw;
-    padding-left: 5vw;
-    padding-right: 15vw;
-    padding-bottom: 35vh;
-    padding-top: 35vh;
-    width: 85vw;
     overflow: scroll;
+    padding-left: 5vw;
+    padding-right: 20vw;
+    width: 85vw;
+}
+
+.container-left-skew {
+    margin-left: 5vw;
+    margin-right: 15vw;
+    overflow: scroll;
+    padding-left: 10vw;
+    padding-right: 15vw;
+    width: 85vw;
 }
 
 .container-centered {
+    height: 100vh;
     margin-left: 15vw;
     margin-right: 15vw;
-    padding-top: 5vh;
-    padding-bottom: 35vh;
-    height: 100vh;
 }
 
 
@@ -129,11 +138,22 @@ section.page:last-of-type {
 
 .circular-square {
     border-radius: 50%;
-    width: 35vmin;
     height: 35vmin;
     shape-outside: circle(50%);
+    width: 35vmin;
 }
 
+.styled-image {
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    border-color: #000000;
+    border-radius: 1%;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    height: 35vmin;
+    width: 35vmin;
+}
 
 
 
@@ -199,45 +219,94 @@ section.page:last-of-type {
 
 .image-background {
     background-color: #DD7F77;
-    background-image: url(./images/stock-images/pink-smoke-suitcase.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../images/stock-images/pink-smoke-suitcase.jpg);
     background-position: 50% 25%;
+    background-repeat: no-repeat;
     z-index: -2;
 }
 @media all and (orientation: portrait) {
     .image-background {
-        background-size: auto cover;
-        -webkit-background-size: auto cover;
         -moz-background-size: auto cover;
         -o-background-size: auto cover;
+        -webkit-background-size: auto cover;
         background-position: 50% 0%;
+        background-size: auto cover;
     }
 }
 @media all and (orientation: landscape) {
     .image-background {
-        background-size: cover auto;
-        -webkit-background-size: cover auto;
         -moz-background-size: cover auto;
         -o-background-size: cover auto;
+        -webkit-background-size: cover auto;
         background-position: 50% 25%;
+        background-size: cover auto;
     }
 }
 
 /* solid background color */
 .solid-background {
-    background-color: #C8C8D4;
+    background-color: #E9ECE5;
     z-index: -2;
 }
 
 /* repeating pattern overlay over image or solid color */
 [class*='-background'] > .overlay {
-    position: absolute;
-    margin: 0px;
-    height: 105vh;
-    width: 105vw;
-    top: -5vh;
-    left: -5vw;
-    z-index: -1;
-    background-image: url(./images/patterns/crossed-squares.png);
+    background-image: url(../images/patterns/crossed-squares.png);
     background-repeat: repeat;
+    height: 105vh;
+    left: -5vw;
+    margin: 0px;
+    position: absolute;
+    top: -5vh;
+    width: 105vw;
+    z-index: -1;
+}
+
+
+
+/* Social Links Sidebar */
+/* You can find other icons to use at http://fontawesome.io/icons/ ; just replace the icon name
+    in the HTML with the name of the icon you would like to use! */
+
+.social-links-left {
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    left: 0px;
+    width: 5vw;
+}
+.social-links-left > a {
+    float: left;
+    text-align: center;
+    height: 25vh;
+    line-height: 25vh;
+    width: 10vw;
+    clear: both;
+}
+
+.social-links-right {
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    right: 0px;
+    width: 5vw;
+}
+.social-links-right > a {
+    float: right;
+    text-align: center;
+    height: 25vh;
+    line-height: 25vh;
+    width: 10vw;
+    clear: both;
+}
+
+.social-links-row {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-wrap: nowrap; /* Safari */
+    flex-wrap: nowrap;
+    -webkit-align-content: stretch; /* Safari */
+    align-content: stretch;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content: space-between; /* Change to space-around for centered links, instead of justified links */
 }

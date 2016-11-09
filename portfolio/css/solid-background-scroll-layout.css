@@ -1,0 +1,71 @@
+body {
+    position: fixed;
+    font-family: 'Muli', sans-serif;
+    color: #3B3A36;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    color: #B3C2BF;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.4em;
+}
+
+main {
+    height: 100vh;
+    overflow: scroll;
+}
+
+section {
+	margin-top: 20vh;
+	margin-bottom: 20vh;
+}
+
+section:first-of-type {
+	margin-top: 30vh;
+	margin-bottom: 20vh;
+}
+
+section:last-of-type {
+	margin-bottom: 20vh;
+}
+
+article {
+	margin-left: 5vw;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-weight: 400;
+}
+
+[class*='-background'] > .overlay-alt {
+    background-image: url(../images/patterns/cubes.png);
+    background-repeat: repeat;
+    height: 105vh;
+    left: -5vw;
+    margin: 0px;
+    position: absolute;
+    top: -5vh;
+    width: 105vw;
+    z-index: -1;
+}
+
+.narrow-page {
+    width: 40vw;
+}
+
+.solid-sidebar-right {
+	background-color: #C0DFD9;
+	position: fixed;
+    z-index: 3;
+    height: 100vh;
+    right: 0px;
+    width: 8vw;
+}

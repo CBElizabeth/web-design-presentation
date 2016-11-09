@@ -35,35 +35,130 @@ Sponsored by **Tech Elevator** & **Cover My Meds**
 
 ---
 
-# Fire up those Chrome Devtools!
-
----
 ![](./portfolio/images/stock-images/pink-smoke-suitcase.jpg)
 ## Unpacking Web Pages
 
+---
+
+## Content 
+## + HTML (**Structure**)
+## + CSS (**Style**)
 
 ---
 
-## Elements
-1. general structure (head, body)
-2. non-semantic elements (div, span)
-4. semantic elements (examples from portfolio page)
-5. activity (basic header with name and photo)
+## HTML (Structure)
+
+HTML = **Hypertext Markup Language**
+A web page is composed of **elements**
+Elements are designated by **tags**
+
+```html
+<p>This is a paragraph element.</p>
+<a href="https://www.google.com/">This is a link.</a>
+<div>This is a div.</div>
+<img src="./images/something-nice.jpg"> <!-- < That is an image. -->
+<!-- And this is a comment! -->
+```
 
 ---
 
-## Styles
-1. what are stylesheets
-2. elements of a style
-3. swap sheets (splitscreen)
-4. manually change styles and refresh
-5. activity (spruce up header)
+**Container elements** typically includes an opening and a closing tag:
+
+```html
+<article>
+	<p>The paragraph element is contained in the article element..
+	and this text is the content of the paragraph element.</p>
+</article>
+```
+
+**Void elements** are self-closing:
+
+```html
+<img src="./images/happy_puppy.jpg">
+<br>
+
+```
+---
+
+**Semantic elements** clearly define their content:
+
+```html
+<section>
+	<article>
+		<h1>This heading is a heading :)</h1>
+		<p>The section defines a section of the document.</p>
+		<p>The article specifies independent, self-contained content.</p>
+		<p>The paragraph defines a paragraph.</p>
+	</article>
+</section>
+```
 
 ---
-## Resources (for me, but also provide resources)
-* http://cdn.onextrapixel.com/wp-content/uploads/2012/12/pf-8.jpg
-* http://www.onextrapixel.com/2013/01/23/60-clean-and-simple-examples-of-portfolio-design/
-* https://envato.com/blog/portfolio-design-trends/
-* https://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly
-* https://github.com/wtfluckey/sealions-designstuffs
-* https://github.com/girldevelopit/gdi-featured-html-css-intro
+
+![left filtered](./portfolio/images/presentation-images/html5-structure.gif)
+
+## A Few Types of Semantic Elements
+* <header></header>
+* <nav></nav>
+* <aside></aside> (sidebars!)
+* <section></section>
+* <article></article>
+* <footer></footer>
+
+---
+
+Element Attributes (**class**, **id**, etc.) provide **information** about the HTML element
+
+```html
+<section id="experience">
+	<article class="text-box">
+		<h1>My Experience</h1>
+	</article>
+</section>
+```
+
+---
+...And then we use that information to style our content!
+
+```css
+.experience {
+	background-color: #000000;
+}
+article.text-box {
+	background-color: #FFFFFF;
+}
+```
+
+---
+
+## CSS (Style)
+
+CSS = **Cascading Style Sheet**
+CSS is used to apply styles to HTML elements.
+
+Styles affect **position**, **size**, **color**, **depth**, **animate**..
+
+..way more than we could hope to cover tonight!
+
+---
+
+```css
+.experience {
+	background-color: #000000;
+}
+```
+
+**.experience** is the selector: what element gets styled?
+**{ ... }** holds the declaration: what combination of styles should we apply?
+**background-color** is the property: what part of the element are we modifying?
+**#000000** is the value: how would we like to modify the property?
+
+---
+
+# Fire up those Chrome Devtools!
+
+---
+
+# Now.. 
+# we dive in!
+

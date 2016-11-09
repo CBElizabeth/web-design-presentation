@@ -1,0 +1,32 @@
+/* layout 1 */
+body {
+    position: fixed;
+    font-family: 'Muli', sans-serif;
+    color: #FFFFFF;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.4em;
+}
+
+main {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-left-skew {
+    overflow: hidden;
+}
+
+.narrow-page {
+    width: 40vw;
+}
+
+h1 {
+    font-size: 1.5em;
+}
