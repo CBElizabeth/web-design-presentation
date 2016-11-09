@@ -1,10 +1,11 @@
 
 ## Make sure you have..
-
 1. Installed Google Chrome
 2. Installed Sublime Text (or another text editor)
 3. A short bio or a few blurbs you might like to include
 4. A few pictures you might want to add
+5. Downloaded the zip file (click **Clone or download**) from:
+https://github.com/CBElizabeth/web-design-presentation
 
 ---
 
