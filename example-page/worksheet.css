@@ -1,0 +1,11 @@
+.first-box {
+	background-color: #3B3A36;
+	box-sizing: unset;
+	border-width: 5px;
+	border-color: #C0DFD9;
+	border-style: dotted;
+	height: 250px;
+	width: 250px;
+	padding: 25px;
+	margin: 25px;
+}

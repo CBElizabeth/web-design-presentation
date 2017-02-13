@@ -1,0 +1,87 @@
+/* Setup */
+
+html {
+    color: #431C5D;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+*, *:after, *:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+textarea {
+    resize: vertical;
+}
+
+/* Comment out text below to restore visible scrollbars! */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body {
+    position: fixed;
+    font-family: 'Muli', sans-serif;
+    color: #3B3A36;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    color: #B3C2BF;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.4em;
+}
+
+main {
+    height: 100vh;
+    overflow: scroll;
+}
+
+/* solid background color */
+.solid-background {
+    background-color: #E9ECE5;
+    z-index: -2;
+}
+
+[class*='-background'] > .overlay-alt {
+    background-image: url(./cubes.png);
+    background-repeat: repeat;
+    height: 105vh;
+    left: -5vw;
+    margin: 0px;
+    position: absolute;
+    top: -5vh;
+    width: 105vw;
+    z-index: -1;
+}
+
+.narrow-page {
+    width: 40vw;
+}
+
+.solid-sidebar-right {
+	background-color: #C0DFD9;
+	position: fixed;
+    z-index: 3;
+    height: 100vh;
+    right: 0px;
+    width: 8vw;
+}
